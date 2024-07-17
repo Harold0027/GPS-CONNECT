@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPSconnect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/prueba3.css">
+    <script src="js/Scontacto.js" defer></script>
+</head>
+<body> 
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2552349-RZK5UHF7UEWYJTLK/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+        
+    <header>
+        <div class="container">
+            <a class="logo" href="#">
+                <img src="imagenes/LogoGPS_sinfondo.png" alt="Logo de GPSconnect" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#somos-proya">Quienes somos</a></li>
+                    <li><a href="#nuestros-programas">Nuestros Servicios</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#contactanos">Contáctanos</a></li>
+                    <li><a href="#preguntas_frecuentes">Preguntas Frecuentes</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#comentarios">Comentarios</a></li>
+                    <li><a href="iniciar_sesion.html">Iniciar sesión</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <br>
+        <h1>¡Tecnología de vanguardia a tu alcance! <br>¡Herramienta de rastreo de alta precisión!</h1>
+        <br>
+        <br>
+        <br>
+        <button>ÚNETE YA!</button>
+    </section>
+
+    <section id="somos-proya" class="section-padding">
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="texto">
+                <h2>Somos <span class="color-acento">GPSconnect</span></h2>
+                <p>En GPS connect, ofrecemos soluciones avanzadas de rastreo y monitoreo mediante tecnología GPS para empresas y usuarios individuales. Desde nuestra fundación nos dedicamos a proporcionar servicios precisos y confiables que mejoran la seguridad y eficiencia de nuestros clientes. Nuestro equipo de expertos está comprometido con la innovación tecnológica, asegurando que nuestros productos superen las expectativas. Ofrecemos servicios como monitoreo en tiempo real, historial de rutas y alertas de eventos, adaptados tanto para flotas comerciales como para vehículos personales. La satisfacción del cliente es nuestra prioridad, por lo que brindamos soporte técnico especializado y asistencia personalizada.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nuestros-programas" class="section-padding">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="programas">
+                <div class="carta">
+                    <h3>MONITOREO EN TIEMPO REAL</h3>
+                    <p>Nuestro servicio de monitoreo en tiempo real te permite rastrear
+                        la ubicación de tus vehículos o activos en cualquier momento.
+                        Con actualizaciones precisas y constantes,
+                        puedes gestionar eficientemente tu flota, mejorar la seguridad y
+                        optimizar rutas. Mantén el control y la visibilidad total con GPS Connect.</p>
+                    <button>+ Info</button>
+                </div>
+                <div class="carta">
+                    <h3>HISTORIAL DE RUTAS</h3>
+                    <p>Con el servicio de historial de rutas de GPS Connect,
+                        puedes acceder a registros detallados de los recorridos
+                        realizados por tus vehículos. Analiza y revisa trayectorias
+                        pasadas para mejorar la planificación, eficiencia y seguridad
+                        de tu flota. Mantén un control exhaustivo con GPS Connect.</p>
+                    <button>+ Info</button>
+                </div>
+                <div class="carta">
+                    <h3>ALERTA DE EVENTOS</h3>
+                    <p>El servicio de alerta de eventos de GPS Connect te notifica
+                        instantáneamente sobre cualquier actividad inusual o importante,
+                        como movimientos no autorizados, excesos de velocidad y más.
+                        Mantente informado y toma decisiones rápidas para garantizar
+                        tu seguridad con GPS Connect.</p>
+                    <button>+ Info</button>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section id="caracteristicas" class="section-padding">
+        <div class="container">
+            <h2>Características</h2>
+            <ul>
+                <li>✔️Interfaz de usuario intuitiva</li>
+                <li>✔️Información detallada y transparente</li>
+                <li>✔️Mapas y visualización</li>
+                <li>✔️Funcionalidades técnicas</li>
+                <li>✔️Soporte y recursos</li>
+                <li>✔️Seguridad</li>
+                <li>✔️Rendimiento</li>
+                <li>✔️Integraciones y compatibilidad</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contactanos" class="section-padding">
+        <div class="container">
+            <h2>Contáctanos</h2>
+            <form name="gps_connect" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit" name="enviar">Enviar</button>
+            </form>
+            <div class="contact-icons">
+                <a href="mailto:eric_hcj@hotmail.com" class="contact-icon">
+                    <img src="imagenes/CORREO.png" alt="Email">
+                    <span>Envíanos un email</span>
+                </a>
+                <a href="https://wa.me/955011647" class="contact-icon" target="_blank">
+                    <img src="imagenes/WPLOGO.png" alt="WhatsApp">
+                    <span>Escríbenos por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="preguntas_frecuentes" class="section-padding">
+        <div class="container">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <button class="faq-question">¿Qué pasa si me roban el celular junto con el auto?</button>
+                <div class="faq-answer">
+                    <p>Puedes acceder desde otros dispositivos (móvil, Tablet, etc)  a la plataforma web o a la aplicación, con tu cuenta de usuario, visualizando las mismas prestaciones y funcionalidades contratadas para tu GPS.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿La instalación del equipo daña la garantía de mi vehículo?</button>
+                <div class="faq-answer">
+                    <p>No, la instalación de nuestros equipos no afecta la garantía de tu vehículo. Nuestros dispositivos están diseñados para ser instalados de manera segura y sin causar daños.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿El dispositivo GPS puede quedarse sin batería y dejar de proteger?</button>
+                <div class="faq-answer">
+                    <p>La mayoría de los dispositivos GPS tienen una batería de respaldo que les permite seguir funcionando incluso si la batería principal se agota.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Puedo instalar este dispositivo en otros tipos de vehículos?</button>
+                <div class="faq-answer">
+                    <p>Sí, nuestros dispositivos GPS son compatibles con una amplia variedad de vehículos, incluidos automóviles, motocicletas y camiones.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Qué pasa si no pago el servicio de mi GPS?</button>
+                <div class="faq-answer">
+                    <p>Si no pagas el servicio de tu GPS, las funciones de rastreo y monitoreo se desactivarán hasta que se regularicen los pagos.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Qué pasa si decido vender mi vehículo que tiene instalado el GPS?</button>
+                <div class="faq-answer">
+                    <p>Puedes transferir el dispositivo GPS al nuevo propietario del vehículo, asegurándote de actualizar la información de la cuenta con los nuevos datos del propietario.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Con qué frecuencia actualiza el mapa la ubicación del vehículo?</button>
+                <div class="faq-answer">
+                    <p>La actualización de la ubicación del vehículo en el mapa depende del modelo del dispositivo GPS, pero generalmente se actualiza cada pocos segundos.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿El GPS no se actualiza?</button>
+                <div class="faq-answer">
+                    <p>Si tu GPS no se actualiza, verifica la conexión de red y asegúrate de que el dispositivo esté encendido y funcionando correctamente.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Tiene corta corriente el dispositivo GPS?</button>
+                <div class="faq-answer">
+                    <p>Sí, muchos de nuestros dispositivos GPS tienen una función de corta corriente que permite detener el motor del vehículo de forma remota en caso de robo.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">¿Tiene reporte de rutas el dispositivo GPS?</button>
+                <div class="faq-answer">
+                    <p>Sí, nuestros dispositivos GPS pueden generar reportes detallados de las rutas recorridas, incluyendo fechas, horas y ubicaciones precisas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="section-padding">
+        <div class="container">
+            <h2>Productos</h2>
+            <div class="filter-section">
+                <select id="marcaSelect">
+                    <option value="">Seleccione una marca</option>
+                  
+                </select>
+                <select id="sensorSelect">
+                    <option value="">Seleccione un sensor</option>
+                  
+                </select>
+            </div>
+            <div id="productosContainer">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="comentarios" class="py-3 white">
+        <div class="container mt-5">
+            <h2 class="text-center mb-4">Comentarios</h2>
+            <div class="row">
+                <div class="col-md-6 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Juan Pérez</h5>
+                            <p class="card-text">⭐⭐⭐⭐</p>
+                            <p class="card-text">"El servicio de GPS Solution ha sido una maravilla para mi negocio
+                                 de transporte. La precisión y la confiabilidad del sistema nos han permitido optimizar 
+                                 nuestras rutas y reducir los tiempos de entrega.  ¡Altamente recomendado!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">María Gómez</h5>
+                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">"Contraté GPS Solution para mi auto personal y
+                                 no podría estar más contenta. La instalación fue rápida y sencilla, 
+                                 y ahora me siento mucho más segura sabiendo que puedo rastrear mi 
+                                 vehículo en cualquier momento. ¡Un servicio excepcional!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Pedro Martínez</h5>
+                            <p class="card-text">⭐⭐⭐⭐</p>
+                            <p class="card-text">"GPS Solution ha sido una gran adición a nuestra flota de taxis.
+                                  Aunque hubo un pequeño problema técnico al principio, 
+                                 el equipo de soporte lo solucionó de inmediato. Muy satisfecho con el servicio."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Laura Fernández</h5>
+                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">"Estoy impresionada con GPS Solution ya que también ofrece alertas de 
+                                velocidad y zonas de seguridad, lo cual es perfecto para asegurarnos de que 
+                                nuestros hijos lleguen seguros a la escuela"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Carlos Ruiz</h5>
+                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">"GPS Solution ha revolucionado nuestra gestión de flotas.
+                                 La interfaz es intuitiva y fácil de usar, y la precisión del rastreo es impresionante. 
+                                 Además, las características adicionales como el historial de rutas y las alertas en
+                                 tiempo real nos han ayudado a mejorar significativamente nuestra eficiencia operativa"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 py-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Franco Lopez</h5>
+                            <p class="card-text">⭐⭐⭐⭐⭐</p>
+                            <p class="card-text">"GPS Solution me ha ayudado enormemente a proteger mi vehículo, 
+                                me siento más seguro al ir de viaje y dejarlo estacionado mientras que yo disfruto"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <section id="final">
+        <h2>¿Aún sigues pensándolo?</h2>
+        <button>REGÍSTRATE YA!</button>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; GPSconnect 2024</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqItems = document.querySelectorAll(".faq-item");
+
+            faqItems.forEach(item => {
+                item.querySelector(".faq-question").addEventListener("click", () => {
+                    faqItems.forEach(el => {
+                        if (el !== item) {
+                            el.classList.remove("active");
+                        }
+                    });
+                    item.classList.toggle("active");
+                });
+            });
+        });
+    </script>
+
+    <script src="js/productos.js" defer></script>
+</body>
+</html>

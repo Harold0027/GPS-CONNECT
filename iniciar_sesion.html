@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPSconnect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/iniciar_sesion.css">
+    <link rel="stylesheet" href="css/prueba3.css">
+
+</head>
+<body> 
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-2552349-RZK5UHF7UEWYJTLK/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+        </script>
+        
+    <header>
+        <div class="container">
+            <a class="logo" href="#">
+                <img src="imagenes/LogoGPS_sinfondo.png" alt="Logo de GPSconnect" class="logo-img">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#somos-proya">Quienes somos</a></li>
+                    <li><a href="index.html#nuestros-programas">Nuestros Servicios</a></li>
+                    <li><a href="index.html#caracteristicas">Características</a></li>
+                    <li><a href="index.html#contactanos">Contáctanos</a></li>
+                    <li><a href="index.html#preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="index.html#productos.html">Productos</a></li>
+                    <li><a href="index.html#comentarios">Comentarios</a></li>
+                    <li><a href="iniciar_sesion.html">Iniciar sesión</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="iniciar_sesion" class="section-padding">
+        <div class="login-container">
+            <h2>Iniciar Sesión</h2>
+            <form action="php/iniciar_sesion.php" method="post">
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+</body>
